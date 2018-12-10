@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">셰핑</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kakao_app_key">98b14cb76c33418e5e813f682011c2fd</string>
+</resources>

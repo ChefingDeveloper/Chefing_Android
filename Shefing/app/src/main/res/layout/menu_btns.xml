@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <!--1. 마이페이지-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/menu_my"
+            android:src="@drawable/menu_my"
+            android:layout_marginTop="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:fontFamily="@font/nanum"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="마이페이지"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--2. 장바구니-->
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/menu_cart"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/cart"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <TextView
+        android:fontFamily="@font/nanum"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:text="장바구니"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+        <!--3. 문의사항-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/menu_info"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_info"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    <TextView
+        android:fontFamily="@font/nanum"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:text="문의사항"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <!--4. 환경설정-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/menu_setting"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/menu_setting"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:fontFamily="@font/nanum"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="환경설정"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
