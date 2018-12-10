@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.reservation.ReservationActivity">
+    <!--1. Title Bar-->
+    <RelativeLayout
+        android:id="@+id/titlebar_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/menuicon_reservation"
+                android:src="@drawable/menu"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@+id/titlebar_reservation"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--2. 테이블 ( 좌석 수 ) 선택-->
+    <RelativeLayout
+        android:id="@+id/layout_seat"
+        android:layout_below="@+id/titlebar_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_table"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/maincolor"
+        android:fontFamily="@font/nanum"
+        android:textSize="13sp"
+        android:text="좌석 선택 >"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--점심 좌석-->
+    <RelativeLayout
+        android:layout_below="@+id/text_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/seat_one"
+        android:src="@drawable/time_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="1인석"
+        android:fontFamily="@font/nanum"
+        android:textColor="@color/maincolor"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/seat_two"
+        android:src="@drawable/time_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="2인석"
+        android:fontFamily="@font/nanum"
+        android:textColor="@color/maincolor"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/seat_four"
+        android:src="@drawable/time_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="4인석"
+        android:fontFamily="@font/nanum"
+        android:textColor="@color/maincolor"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/seat_many"
+        android:src="@drawable/time_unselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="6-8인석"
+        android:fontFamily="@font/nanum"
+        android:textColor="@color/maincolor"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <!--3. Calendar-->
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_below="@+id/layout_seat"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <LinearLayout
+                android:id="@+id/below_calendar"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/calendar"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+                <TextView
+                    android:fontFamily="@font/nanum_bold"
+                    android:textColor="@color/maincolor"
+                    android:layout_marginTop="20dp"
+                    android:text="좌석을 선택해 주세요 :)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+    <sun.bob.mcalendarview.MCalendarView
+        android:visibility="gone"
+        android:id="@+id/calendar"
+        tools:context=".ui.reservation.ReservationActivity"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:contextClickable="true"
+        android:layout_height="330dp">
+
+    </sun.bob.mcalendarview.MCalendarView>
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/subcolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+        <!--4. 점심 좌석-->
+        <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/maincolor"
+        android:fontFamily="@font/nanum"
+        android:textSize="13sp"
+        android:text="점심 > * 날짜별 가능시간 표기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_lunch"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/lunch1"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_lunch1"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_lunch1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/lunch2"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_lunch2"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_lunch2"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/lunch3"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_lunch3"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_lunch3"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+        </RelativeLayout>
+        <!--5. 저녁 좌석-->
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:text="저녁 > * 날짜별 가능시간 표기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_dinner"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/dinner1"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_dinner1"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_dinner1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/dinner2"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_dinner2"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_dinner2"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/dinner3"
+            android:src="@drawable/time_unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_dinner3"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:fontFamily="@font/nanum"
+            android:textColor="@color/maincolor"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/seat_dinner3"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+     <!--6. 메뉴 정보-->
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/payment_box"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/maincolor"
+                    android:id="@+id/reservation_date_menu"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="13sp"
+                    android:text="2018.11.08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/maincolor"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="13sp"
+                    android:text=" / "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/maincolor"
+                    android:id="@+id/reservation_time_menu"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="13sp"
+                    android:text="14:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/maincolor"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="13sp"
+                    android:text=" / "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/maincolor"
+                    android:id="@+id/reservation_name_menu"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="13sp"
+                    android:text="스테이크만찬, 유기농 스파게티"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/subcolor"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/maincolor"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="13sp"
+                        android:text="수량"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/reservation_count_menu"
+                        android:textColor="@color/maincolor"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="13sp"
+                        android:text="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/reservation_price_menu"
+                        android:textColor="@color/maincolor"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="13sp"
+                        android:text="23,200"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/maincolor"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="13sp"
+                        android:text="원"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+     <!--7. 결제 수단-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/payment_box"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+            <TextView
+                android:textColor="@color/maincolor"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="13sp"
+                android:text="결제수단"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/subcolor"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/pay_method"
+                    android:src="@drawable/kakaopay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:text="결제금액"
+                        android:textColor="@color/maincolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/reservation_price2_menu"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:text="23,200"
+                        android:textColor="@color/maincolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:text="원"
+                        android:textColor="@color/maincolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--8. 결제 동의-->
+        <LinearLayout
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/payment_box"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <TextView
+                android:textColor="@color/maincolor"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="13sp"
+                android:text="주문자 동의"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/subcolor"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:text="이용약관 등 동의"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="@color/maincolor"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/reservation_checkbox1"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="@color/maincolor"
+                        android:textSize="13sp"
+                        android:text="동의합니다"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:text="구매 및 결제대행서비스 이용약관"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="@color/maincolor"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/reservation_checkbox2"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="@color/maincolor"
+                        android:textSize="13sp"
+                        android:text="동의합니다"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <!--결제하기 버튼-->
+    <RelativeLayout
+        android:id="@+id/btn_gopayment"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/maincolor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:textSize="15sp"
+            android:fontFamily="@font/nanum_extra"
+            android:textColor="#ffffff"
+            android:text="결제하기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

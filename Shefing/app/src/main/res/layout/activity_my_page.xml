@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_mypage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/menuicon_mypage"
+                android:src="@drawable/menu"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--1. 탭 레이아웃-->
+    <android.support.design.widget.TabLayout
+        app:tabTextColor="@color/subcolor"
+        app:tabSelectedTextColor="@color/maincolor"
+        android:layout_below="@id/titlebar_mypage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_mypage"
+        app:tabIndicatorColor="@color/maincolor"
+        app:tabIndicatorHeight="3dp"
+        ></android.support.design.widget.TabLayout>
+
+    <!--2. 뷰페이저-->
+    <android.support.v4.view.ViewPager
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/tab_mypage"
+        android:id="@+id/viewpager_mypage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>

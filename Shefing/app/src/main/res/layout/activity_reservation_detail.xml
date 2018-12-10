@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mypage.reservation_tab.ReservationDetailActivity">
+
+    <!--1. 타이틀바-->
+    <RelativeLayout
+        android:id="@+id/titlebar_reservation_detail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/menuicon_reservation_detail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/menu" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/titlebar_reservation_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <TextView
+           android:fontFamily="@font/nanum_bold"
+           android:textColor="@color/maincolor"
+           android:textSize="15sp"
+           android:text="예약정보"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/maincolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+        <!--매장위치-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="매장위치"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_shop"
+                    android:layout_alignParentRight="true"
+                    android:text="서울 서초구 방배동 1021"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--셰프정보-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="셰프정보"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_chef"
+                    android:layout_alignParentRight="true"
+                    android:text="니콜라스 멜"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--예약일시-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="예약일시"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_date"
+                    android:layout_alignParentRight="true"
+                    android:text="2018.12.01 점심 14:30"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nanum_bold"
+            android:textColor="@color/maincolor"
+            android:textSize="15sp"
+            android:text="메뉴정보"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/maincolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+        <!--메뉴-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="메뉴"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_menu"
+                    android:layout_alignParentRight="true"
+                    android:text="스테이크만찬, 유기농스파게티"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--수량-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="수량"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_count"
+                    android:layout_alignParentRight="true"
+                    android:text="2개"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nanum_bold"
+            android:textColor="@color/maincolor"
+            android:textSize="15sp"
+            android:text="결제정보"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/maincolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+        <!--결제일시-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="결제일시"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_paydate"
+                    android:layout_alignParentRight="true"
+                    android:text="2018.09.01 오전 10:15"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--결제수단-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="결제수단"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_paymethod"
+                    android:layout_alignParentRight="true"
+                    android:text="카카오페이"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--결제금액-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="결제금액"
+                android:fontFamily="@font/nanum_bold"
+                android:layout_marginTop="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/maincolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reservation_detail_payprice"
+                    android:layout_alignParentRight="true"
+                    android:text="23,200원"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/maincolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--결제취소 버튼-->
+    <RelativeLayout
+        android:id="@+id/btn_cancel"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/maincolor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:textSize="15sp"
+            android:fontFamily="@font/nanum_extra"
+            android:textColor="#ffffff"
+            android:text="결제취소"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

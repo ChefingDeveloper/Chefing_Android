@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.detail_menu.MenuDetailActivity">
+
+    <!--1. 타이틀 바-->
+    <RelativeLayout
+        android:id="@+id/titlebar_menu_detail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/menuicon_menu_detail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/menu" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_marginBottom="60dp"
+        android:layout_below="@+id/titlebar_menu_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--2. 사진 -->
+    <ImageView
+        android:id="@+id/menu_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pork"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/viewpager_menu_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--2. 수량 변경-->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15sp"
+                    android:text="수량"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/minus_button"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/btn_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15sp"
+                    android:text="1"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/plus_button"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/btn_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/total_price"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15sp"
+                    android:text="26,800"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="15sp"
+                    android:text="원"
+                    android:fontFamily="@font/nanum_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/subcolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+        <!--3. 메뉴 설명-->
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/name_menu_detail"
+                    android:fontFamily="@font/nanum_extra"
+                    android:textColor="@color/maincolor"
+                    android:textSize="20sp"
+                    android:text="스테이크 만찬"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/price_menu_detail"
+                        android:fontFamily="@font/nanum_extra"
+                        android:textColor="@color/maincolor"
+                        android:textSize="20sp"
+                        android:text="12,900"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:fontFamily="@font/nanum_extra"
+                        android:textColor="@color/maincolor"
+                        android:textSize="20sp"
+                        android:text="원"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:fontFamily="@font/nanum_extra"
+                    android:textColor="@color/subcolor"
+                    android:textSize="13sp"
+                    android:text="1인분 기준"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            
+        </RelativeLayout>
+        
+        <View
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/subcolor"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/maincolor"
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:text="메뉴설명 >"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:fontFamily="@font/nanum"
+            android:textSize="13sp"
+            android:textColor="@color/maincolor"
+            android:text="로스팅한 닭가슴살에 3가지 슈퍼곡물 (수수, 보리, 퀴노아)을 더하고, 단호박과 각종 야채를 곁들여 5대 영양소가 골고루 갖춰진 신선하고 든든한 샐러드를 완성했습니다. "
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/explain_menu_detail"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_putcart"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/maincolor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:textSize="15sp"
+            android:fontFamily="@font/nanum_extra"
+            android:textColor="#ffffff"
+            android:text="장바구니 담기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
